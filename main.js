@@ -1,7 +1,13 @@
 var value = 0;
+
+function setup() {
+  createCanvas(480, 320);
+  background(153);
+}
+
 function draw() {
   fill(value);
-  rect(25, 25, 50, 50);
+  background(value);
 }
 function deviceMoved() {
   value = value + 5;
