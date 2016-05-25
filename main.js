@@ -9,9 +9,14 @@ function draw() {
   fill(value);
   background(value);
 }
+
 function deviceMoved() {
-  value = value + 5;
-  if (value > 255) {
-    value = 0;
-  }
+  
+}
+
+function deviceShaken(){
+    value = value + 5;
+    if (value > 255) {
+        value = 0;
+    }
 }
