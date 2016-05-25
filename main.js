@@ -1,3 +1,3 @@
-function deviceShake(){
+function deviceMoved(){
     alert("ok");
 }
