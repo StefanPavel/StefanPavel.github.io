@@ -1,0 +1,3 @@
+function deviceShake(){
+    alert("ok");
+}
