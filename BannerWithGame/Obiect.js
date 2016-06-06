@@ -6,7 +6,7 @@ var Premiu = function(isPoint, xPos, yPos){
     MaxObjects--;
     
 	this.gravity = function(){
-		this.yPos += 1;
+		this.yPos += 2;
 	};
 	this.desen = function(){
 		if(this.yPos > 250 || this.finished){
@@ -30,7 +30,7 @@ var Premiu = function(isPoint, xPos, yPos){
 }    
 
 var Points = 0;
-var MaxObjects = 10;
+var MaxObjects = 50;
 
 var premii = [new Premiu(true, (Math.random() * 1000) % 240 + (Math.random() * 1000) % 30, -10 - (Math.random() * 1000) % 101 ),
             new Premiu(true, (Math.random() * 1000) % 240 + (Math.random() * 1000) % 30, -5 - (Math.random() * 1000) % 101 ),
@@ -45,6 +45,13 @@ function generateNewObjects(){
 		if(premii[i].finished && MaxObjects > 0){
             premii[i] = new Premiu(true, (Math.random() * 1000) % 240 + (Math.random() * 1000) % 30, -10 - (Math.random() * 1000) % 101 );
         }
-			
 	}
+}
+
+function allObjectsFinished(){
+    for(var i = 0; i < 5; i++){
+        if(!premii[i].finished)
+            return false;
+    }
+    return true;
 }
