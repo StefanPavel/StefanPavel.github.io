@@ -1,11 +1,15 @@
+var gameFinished = false;
+
 function setup() {
   createCanvas(300, 250);
 }
 
 function draw() {
   background(190, 206, 212);
-    if(allObjectsFinished())
+    if(allObjectsFinished()){
         gameOver();
+        gameFinished = true;
+    }
     else{
         for(var i = 0; i < 5; i++){
             premii[i].gravity();
@@ -18,9 +22,14 @@ function draw() {
 }
 
 function mouseClicked(){
-	for(var i = 0; i < 5; i++){
-        premii[i].click();
+    if(gameFinished)
+        resetGame();
+    else{
+        for(var i = 0; i < 5; i++){
+            premii[i].click();
+        }    
     }
+	
 }
 
 function drawScoreBar(){
@@ -35,7 +44,15 @@ function drawScoreBar(){
 function gameOver(){
     fill(255);
     textSize(20);
-    text("Felicitari!", 100, 110);
-    text("Ai strans " + Points + " puncte", 60, 140);
+    text("Felicitari!", 100, 90);
+    text("Ai strans " + Points + " puncte", 60, 120);
+    text("click pentru a reincepe", 50, 150);
     noFill();
+}
+
+function resetGame(){
+    gameFinished = false;
+    MaxObjects = 10;
+    initObjects(); 
+    Points = 0;
 }

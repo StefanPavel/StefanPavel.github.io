@@ -30,7 +30,7 @@ var Premiu = function(isPoint, xPos, yPos){
 }    
 
 var Points = 0;
-var MaxObjects = 50;
+var MaxObjects = 10;
 
 var premii = [new Premiu(true, (Math.random() * 1000) % 240 + (Math.random() * 1000) % 30, -10 - (Math.random() * 1000) % 101 ),
             new Premiu(true, (Math.random() * 1000) % 240 + (Math.random() * 1000) % 30, -5 - (Math.random() * 1000) % 101 ),
@@ -46,6 +46,12 @@ function generateNewObjects(){
             premii[i] = new Premiu(true, (Math.random() * 1000) % 240 + (Math.random() * 1000) % 30, -10 - (Math.random() * 1000) % 101 );
         }
 	}
+}
+
+function initObjects(){
+    for(var i = 0; i < 5; i++){
+        premii[i] = new Premiu(true, (Math.random() * 1000) % 240 + (Math.random() * 1000) % 30, -10 - (Math.random() * 1000) % 101 );
+    }
 }
 
 function allObjectsFinished(){
