@@ -36,7 +36,11 @@ function mousePressed(){
 }
 
 function savePhoto(){
-    saveCanvas(cnv, "certificat", "png");
+    saveFrames("certificat", "png", 1,1);
+    //saveCanvas(cnv, "certificat", "png");
+    //var image = cnv.toDataURL("image/png").replace("image/png", "image/octet-stream");  
+    // here is the most important part because if you dont replace you will get a DOM 18 exception.
+    //window.location.href=image; // it will save locally
 }
 
 function drawCertificat(){
