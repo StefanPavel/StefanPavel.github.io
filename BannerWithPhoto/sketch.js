@@ -8,7 +8,19 @@ var started = false;
 function setup() {
     cnv = createCanvas(320, 240);
     logo = loadImage("logo.png");
-    capture = createCapture(VIDEO);
+    
+    var constraints = {
+        video: {
+                facingMode: "user",
+                mandatory: {
+                    minWidth: 320,
+                    minHeight: 240
+                },
+        },
+        audio: false
+    };
+    
+    capture = createCapture(constraints);
     capture.size(320, 240);
     capture.hide();
 }
