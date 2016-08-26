@@ -20,9 +20,17 @@
                 color: white;                
                 font-size: 60px;
                 display: inline;
-                top: 50px;
+                
                 margin-right: 30px;
             }
+            #text{
+                background-color:crimson;
+                position: absolute;
+                top: 50px;
+                left: 200px;
+                right: 200px;
+                overflow: hidden;
+            }            
         </style>
         <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
         <script src="app.js"></script>
@@ -30,10 +38,12 @@
     
     <body>
         <div id="container">
-            <p id="d">1d</p>
-            <p id="h">3h</p>
-            <p id="m">5m</p>
-            <p id="s">10s</p>
+            <div id="text">
+                <p id="d">1d</p>
+                <p id="h">3h</p>
+                <p id="m">5m</p>
+                <p id="s">10s</p>
+            </div>
         </div>
     </body>
 </html>
