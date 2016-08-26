@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>970x250</title>
+        <style>
+            body, html{
+                padding: 0px;
+                border: 0px;
+                margin: 0px;
+            }
+            #container{
+                position: absolute;
+                text-align: center;
+                background-image: url(bg.jpg);
+                width: 970px;
+                height: 250px;
+            }
+            p{
+                position: relative;
+                color: white;                
+                font-size: 60px;
+                display: inline;
+                top: 50px;
+                margin-right: 30px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </head>
+    
+    <body>
+        <div id="container">
+            <p id="d">1d</p>
+            <p id="h">3h</p>
+            <p id="m">5m</p>
+            <p id="s">10s</p>
+        </div>
+    </body>
+</html>
