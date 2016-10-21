@@ -16,7 +16,7 @@ $(document).ready(function () {
 });
 
 //var end = new Date('01/01/2017 00:00 AM');// mm/dd/yyyy
-var end = new Date('08/30/2016 11:30 AM');// mm/dd/yyyy
+var end = new Date('10/25/2016 11:30 AM');// mm/dd/yyyy
 
 var _second = 1000;
 var _minute = _second * 60;
