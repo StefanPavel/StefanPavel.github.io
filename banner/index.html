@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>banner</title>
+        <style>
+            html, body{
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+                width: 100%;
+                height: 100%;
+            }
+            #main{
+                background-image:url(1.jpg);
+                background-size: 970px 250px;                
+                width: 300px;
+                height: 250px;
+                //text-align: center;
+            }
+            img{
+                position: absolute;
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+            }
+        </style>
+        <script>
+            var clickTag = "http://www2.hm.com/ro_ro/index.html";
+        </script>
+    </head>
+    <body>
+        <a href="cupon.pdf" download="cupon" onclick="window.open(clickTag)">
+            <div id="main">
+                <img src="1.jpg" id="1">
+            </div>
+        </a>
+    </body>
+</html>
