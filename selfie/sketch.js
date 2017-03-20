@@ -34,7 +34,7 @@ function takePhoto(){
             alert('err');
             console.log(msg);
         },
-        dataType: 'jsonp'
+        dataType: 'json'
     });
     
     resizeCanvas(300, 250);
