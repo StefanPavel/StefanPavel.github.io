@@ -22,7 +22,7 @@ function takePhoto(){
     
     $.ajax({
         type: 'POST',
-        url: 'https://api.gustullays.ro/api/v1.0/save-selfie',
+        url: 'https://ftp.voxline.ro/api/v1.0/save-selfie',
         data: { 
             'img': cnv.canvas.toDataURL()
         },
